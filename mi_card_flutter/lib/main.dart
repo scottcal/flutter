@@ -22,8 +22,19 @@ class MyApp extends StatelessWidget {
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
+                fontFamily: 'Pacifico',
+                color: Colors.white,
               ),
             ),
+            Text(
+              'The Big Cheese',
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'SourceSansPro',
+                color: Colors.white,
+              ),
+          ),
           ],
         )),
       ),
