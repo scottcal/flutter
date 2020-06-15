@@ -4,7 +4,7 @@ import 'package:audioplayers/audio_cache.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
-  void playSound(int soundNum) {
+  void PlaySound(int soundNum) {
     final player = AudioCache();
     player.play('note$soundNum.wav');
   }
@@ -15,65 +15,60 @@ class XylophoneApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Column(
-            children: [
+            children: <Widget>[
               FlatButton(
-                onPressed: () {
-                  playSound(1);
-                },
-                color: Colors.yellow,
-              ),
-              FlatButton(
-                onPressed: () {
-                  playSound(2);
-                },
-                color: Colors.orange,
-              ),
-              FlatButton(
-                onPressed: () {
-                  playSound(3);
-                },
-                color: Colors.deepOrange,
-              ),
-              FlatButton(
-                onPressed: () {
-                  playSound(4);
-                },
                 color: Colors.red,
+                onPressed: () {
+                  PlaySound(1);
+                },
+                child: Text('click me'),
               ),
               FlatButton(
+                color: Colors.orange,
                 onPressed: () {
-                  playSound(5);
+                  PlaySound(2);
                 },
+                child: Text('click me'),
+              ),
+              FlatButton(
+                color: Colors.yellow,
+                onPressed: () {
+                  PlaySound(3);
+                },
+                child: Text('click me'),
+              ),
+              FlatButton(
                 color: Colors.green,
+                onPressed: () {
+                  PlaySound(4);
+                },
+                child: Text('click me'),
               ),
               FlatButton(
+                color: Colors.teal,
                 onPressed: () {
-                  playSound(6);
+                  PlaySound(5);
                 },
+                child: Text('click me'),
+              ),
+              FlatButton(
                 color: Colors.blue,
+                onPressed: () {
+                  PlaySound(6);
+                },
+                child: Text('click me'),
               ),
               FlatButton(
+                color: Colors.purple,
                 onPressed: () {
-                  playSound(7);
+                  PlaySound(7);
                 },
-                color: Colors.indigo,
+                child: Text('click me'),
               ),
             ],
           ),
         ),
       ),
     );
-  }
-}
-
-class NoteButton extends StatefulWidget {
-  @override
-  _NoteButtonState createState() => _NoteButtonState();
-}
-
-class _NoteButtonState extends State<NoteButton> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
