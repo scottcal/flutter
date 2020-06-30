@@ -27,6 +27,7 @@
 .pub-cache/
 .pub/
 build/
+flutter_export_environment.sh
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -72,3 +73,4 @@ build/
 dicee-flutter/ios/Flutter/flutter_export_environment.sh
 mi_card_flutter/ios/Flutter/flutter_export_environment.sh
 magic-8-ball-flutter/ios/Flutter/flutter_export_environment.sh
+
