@@ -1,5 +1,6 @@
 //TODO: Add your imports here.
 import 'utilities/networking.dart';
+import 'dart:convert';
 
 const List<String> currenciesList = [
   'AUD',
@@ -31,7 +32,8 @@ const List<String> cryptoList = [
   'LTC',
 ];
 
-const coinAPIURL = 'https://rest.coinapi.io/v1/exchangerate';
+// const coinAPIURL = 'https://rest.coinapi.io/v1/exchangerate';
+const coinAPIURL = 'https://rest-sandbox.coinapi.io/v1/exchangerate';
 const apiKey = '0F81D464-38C7-42C4-8D0F-EA224FA6F9B7';
 
 class CoinData {
@@ -41,7 +43,18 @@ class CoinData {
     print(url);
     NetworkHelper networkHelper = NetworkHelper(url);
     var coinData = await networkHelper.getData();
+    print(coinData);
+    try {
+      var coinRateData = coinData['rate'];
+      print('The Rate is $coinRateData');
 
-    return coinData;
+      return coinData;
+    } catch (e) {
+      throw 'Problem with the get request: $e';
+    }
+
+    //var coinDataRate = jsonDecode(coinData['rate']);
+
+    //return coinData;
   }
 }

@@ -50,6 +50,7 @@ class _PriceScreenState extends State<PriceScreen> {
     return CupertinoPicker(
       backgroundColor: Colors.lightBlue,
       itemExtent: 32.0,
+      looping: true,
       onSelectedItemChanged: (selectedIndex) {
         print("$selectedIndex ${currenciesList[selectedIndex]} ");
         selectedCurrency = currenciesList[selectedIndex];
@@ -91,6 +92,23 @@ class _PriceScreenState extends State<PriceScreen> {
     //TODO: Call getData() when the screen loads up.
   }
 
+  Column makeCards() {
+    List<CoinCard> coinCard = [];
+    for (String crypto in cryptoList) {
+      coinCard.add(
+        CoinCard(
+          value: coinPriceBTC,
+          selectedCurrency: selectedCurrency,
+          cryptoCurrency: crypto,
+        ),
+      );
+    }
+    return Column(
+      children: coinCard,
+      crossAxisAlignment: CrossAxisAlignment.center,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,26 +119,7 @@ class _PriceScreenState extends State<PriceScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              CoinCard(
-                value: coinPriceBTC,
-                selectedCurrency: selectedCurrency,
-                cryptoCurrency: cryptoList[0],
-              ),
-              CoinCard(
-                value: coinPriceETH,
-                selectedCurrency: selectedCurrency,
-                cryptoCurrency: cryptoList[1],
-              ),
-              CoinCard(
-                value: coinPriceLTC,
-                selectedCurrency: selectedCurrency,
-                cryptoCurrency: cryptoList[2],
-              ),
-            ],
-          ),
+          makeCards(),
           Container(
             height: 150.0,
             alignment: Alignment.center,
