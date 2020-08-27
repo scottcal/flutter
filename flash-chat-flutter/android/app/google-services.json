@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "511936500301",
+    "firebase_url": "https://flash-chat-faf58.firebaseio.com",
+    "project_id": "flash-chat-faf58",
+    "storage_bucket": "flash-chat-faf58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511936500301:android:3135947238f4cf712a8204",
+        "android_client_info": {
+          "package_name": "co.ScottCalafiore.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511936500301-9oonkit6pkj9hc11if7nfufs8al1rue0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsV4D7W1ip1JW4XjEbJXsrwFWnRrL8ogQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511936500301-9oonkit6pkj9hc11if7nfufs8al1rue0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
