@@ -74,3 +74,5 @@ dicee-flutter/ios/Flutter/flutter_export_environment.sh
 mi_card_flutter/ios/Flutter/flutter_export_environment.sh
 magic-8-ball-flutter/ios/Flutter/flutter_export_environment.sh
 
+flash-chat-flutter/ios/Runner/GoogleService-Info.plist
+flash-chat-flutter/android/app/google-services.json
